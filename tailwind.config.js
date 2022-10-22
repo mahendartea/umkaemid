@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    // colors: {
+    //   'abu': '#e6e6e6',
+    //   'hitam': '#000000'
+    // }
   },
   plugins: [],
 }
