@@ -5,11 +5,7 @@
     <nav class="px-5 m-auto flex items-center py-2 justify-between h-14">
       <div class="md:flex md:justify-between items-center md:w-1/3 w-1/2">
         <div class="md:flex justify-start items-center">
-          <img
-            src="~/assets/img/uemkaem.png"
-            alt="logo"
-            class="md:h-5 md:mx-5 h-6"
-          />
+          <img src="/img/uemkaem.png" alt="logo" class="md:h-5 md:mx-5 h-6" />
           <div class="hidden md:flex">
             <input
               type="text"
@@ -45,41 +41,29 @@
       </div>
       <div class="text-center md:w-1/3">
         <ul class="lg:flex lg:justify-between items-center m-auto hidden">
-          <li class="px-2 flex text-slate-600 hover:text-slate-700 text-sm">
+          <li
+            v-for="l in navbar"
+            :key="l.id"
+            class="px-2 flex text-slate-600 hover:text-slate-700 text-sm"
+          >
             <img
+              :alt="l.alt"
+              :src="l.image"
               class="mx-1"
-              src="~/assets/img/beranda-act.png"
-              alt="beranda"
-              width="23"
               height="23"
-            /><a href="#"> Cari Usaha</a>
-          </li>
-          <li class="px-2 flex text-slate-600 hover:text-slate-700 text-sm">
-            <img
-              class="mx-1"
-              src="~/assets/img/newsfeed-non.png"
-              alt="beranda"
               width="23"
-              height="23"
-            /><a href="#">NewFeed</a>
-          </li>
-          <li class="px-2 flex text-slate-600 hover:text-slate-700 text-sm">
-            <img
-              class="mx-1"
-              src="~/assets/img/marketplace-non.png"
-              alt="beranda"
-              width="23"
-              height="23"
-            /><a href="#">Merketpreneur</a>
+              :key="l.image"
+            /><a href="#"> {{ l.navbarName }}</a>
           </li>
         </ul>
       </div>
       <div class="md:w-1/3 md:flex md:justify-end text-end">
         <!-- humberger menu tailwind -->
         <button
+          @click="showMenu = !showMenu"
           class="
             md:hidden
-            border border-slate-400/20
+            border border-slate-600/20
             px-4
             py-1
             rounded
@@ -92,9 +76,70 @@
           <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
             >Daftar
           </a>
-          <a href="#" class="px-2 text-slate-600 hover:text-slate-700">Masuk</a>
+          <a href="#" class="px-2 text-slate-600 hover:text-slate-700">Login</a>
+        </div>
+        <!-- menu mobile version tailwind -->
+        <div
+          v-if="showMenu"
+          class="
+            md:hidden
+            absolute
+            top-14
+            right-0
+            w-full
+            bg-[#e6e6e6]
+            flex flex-col
+            items-center
+            text-center
+            py-2rounded-b
+          "
+        >
+          <div class="mb-2">
+            <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
+              >Beranda</a
+            >
+            <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
+              >Newsfeed</a
+            >
+            <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
+              >MarketPlace</a
+            >
+          </div>
+          <a
+            href="#"
+            class="px-2 border border-t-2 text-slate-600 hover:text-slate-700"
+            >Daftar</a
+          >
+          <a href="#" class="px-2 text-slate-600 hover:text-slate-700">Login</a>
         </div>
       </div>
     </nav>
   </div>
 </template>
+<script>
+export default {
+  //image looping v-for
+  data() {
+    return {
+      navbar: [
+        {
+          navbarName: "Beranda",
+          image: "/img/beranda-act.png",
+          alt: "beranda",
+        },
+        {
+          navbarName: "newsfeed",
+          image: "/img/newsfeed-non.png",
+          alt: "newsfeed",
+        },
+        {
+          navbarName: "marketplace",
+          image: "/img/marketplace-non.png",
+          alt: "marketplace",
+        },
+      ],
+      showMenu: false,
+    };
+  },
+};
+</script>
