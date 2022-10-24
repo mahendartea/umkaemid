@@ -1,5 +1,5 @@
 <template>
   <NuxtLayout>
-    <h1>Beranda</h1>
+    <h1>Market Place</h1>
   </NuxtLayout>
 </template>

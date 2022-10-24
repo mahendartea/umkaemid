@@ -5,7 +5,9 @@
     <nav class="px-5 m-auto flex items-center py-2 justify-between h-14">
       <div class="md:flex md:justify-between items-center md:w-1/3 w-1/2">
         <div class="md:flex justify-start items-center">
-          <img src="/img/uemkaem.png" alt="logo" class="md:h-5 md:mx-5 h-6" />
+          <NuxtLink to="/">
+            <img src="/img/uemkaem.png" alt="logo" class="md:h-5 md:mx-5 h-6" />
+          </NuxtLink>
           <div class="hidden md:flex">
             <input
               type="text"
@@ -53,7 +55,9 @@
               height="23"
               width="23"
               :key="l.image"
-            /><a href="#"> {{ l.navbarName }}</a>
+            /><NuxtLink :to="l.link">
+              {{ l.navbarName }}
+            </NuxtLink>
           </li>
         </ul>
       </div>
@@ -126,16 +130,19 @@ export default {
           navbarName: "Beranda",
           image: "/img/beranda-act.png",
           alt: "beranda",
+          link: "/",
         },
         {
-          navbarName: "newsfeed",
+          navbarName: "Newsfeed",
           image: "/img/newsfeed-non.png",
           alt: "newsfeed",
+          link: "/newsfeed",
         },
         {
-          navbarName: "marketplace",
+          navbarName: "Marketplace",
           image: "/img/marketplace-non.png",
           alt: "marketplace",
+          link: "/marketplace",
         },
       ],
       showMenu: false,
