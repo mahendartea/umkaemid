@@ -1,6 +1,5 @@
 <template>
   <!-- navbar tailwind responsize example -->
-
   <div class="bg-[#e6e6e6]">
     <nav class="px-5 m-auto flex items-center py-2 justify-between h-14">
       <div class="md:flex md:justify-between items-center md:w-1/3 w-1/2">
@@ -36,29 +35,41 @@
                 h-9
               "
             >
-              <font-awesome-icon icon="fas fa-search" class="text-white" />
+              <font-awesome-icon icon="fa-search" class="text-white" />
             </button>
           </div>
         </div>
       </div>
       <div class="text-center md:w-1/3">
         <ul class="lg:flex lg:justify-between items-center m-auto hidden">
-          <li
-            v-for="l in navbar"
-            :key="l.id"
-            class="px-2 flex text-slate-600 hover:text-slate-700 text-sm"
-          >
-            <img
-              :alt="l.alt"
-              :src="l.image"
-              class="mx-1"
-              height="23"
-              width="23"
-              :key="l.image"
-            /><NuxtLink :to="l.link">
-              {{ l.navbarName }}
-            </NuxtLink>
-          </li>
+          <NuxtLink :to="l.link" v-for="l in navbar" :key="l.id">
+            <li
+              class="
+                px-2
+                flex
+                text-slate-600 text-sm
+                hover:text-[#ebb22b]
+                focus:outline-none focus:text-[#ebb22b]
+                font-semibold
+                py-2
+                rounded
+                transition
+                duration-300
+                ease-in-out
+              "
+              :class="{ 'text-[#ebb22b]': $route.path === l.link }"
+            >
+              <img
+                :alt="l.alt"
+                :src="l.image"
+                class="mx-1"
+                height="23"
+                width="23"
+                :key="l.image"
+              />
+              <p class="ml-2">{{ l.navbarName }}</p>
+            </li>
+          </NuxtLink>
         </ul>
       </div>
       <div class="md:w-1/3 md:flex md:justify-end text-end">
@@ -98,15 +109,11 @@
             py-2rounded-b
           "
         >
-          <div class="mb-2">
-            <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
-              >Beranda</a
-            >
-            <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
-              >Newsfeed</a
-            >
-            <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
-              >MarketPlace</a
+          <div class="mb-2" v-for="ml in navbar" :key="ml.id">
+            <NuxtLink
+              class="px-2 text-slate-600 hover:text-slate-700"
+              :to="ml.link"
+              >{{ ml.navbarName }}</NuxtLink
             >
           </div>
           <a
