@@ -1,5 +1,4 @@
 <template>
-  <!-- navbar tailwind responsize example -->
   <div class="bg-[#e6e6e6]">
     <nav class="px-5 m-auto flex items-center py-2 justify-between h-14">
       <div class="md:flex md:justify-between items-center md:w-1/3 w-1/2">
@@ -7,7 +6,7 @@
           <NuxtLink to="/">
             <img src="/img/uemkaem.png" alt="logo" class="md:h-5 md:mx-5 h-6" />
           </NuxtLink>
-          <div class="hidden md:flex">
+          <div class="hidden lg:flex">
             <input
               type="text"
               placeholder="Pencarian Anda"
@@ -41,7 +40,15 @@
         </div>
       </div>
       <div class="text-center md:w-1/3">
-        <ul class="lg:flex lg:justify-between items-center m-auto hidden">
+        <ul
+          class="
+            md:flex md:justify-between
+            items-center
+            m-auto
+            md:space-x-4
+            hidden
+          "
+        >
           <NuxtLink :to="l.link" v-for="l in navbar" :key="l.id">
             <li
               class="
@@ -67,7 +74,7 @@
                 width="23"
                 :key="l.image"
               />
-              <p class="ml-2">{{ l.navbarName }}</p>
+              <p class="ml-2 lg:w-32 text-sm">{{ l.navbarName }}</p>
             </li>
           </NuxtLink>
         </ul>
@@ -88,10 +95,21 @@
           <font-awesome-icon icon="fa-solid fa-bars" class="text-slate-500" />
         </button>
         <div class="hidden md:flex">
-          <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
-            >Daftar
-          </a>
-          <a href="#" class="px-2 text-slate-600 hover:text-slate-700">Login</a>
+          <NuxtLink to="/register">
+            <a
+              href="#"
+              class="px-3 text-slate-600 hover:text-slate-700 py-1 rounded-md"
+              :class="{
+                'bg-[#ebb22b] text-white': $route.path === '/register',
+              }"
+              >Daftar
+            </a>
+          </NuxtLink>
+          <NuxtLink to="/login">
+            <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
+              >Login</a
+            >
+          </NuxtLink>
         </div>
         <!-- menu mobile version tailwind -->
         <div
@@ -116,12 +134,16 @@
               >{{ ml.navbarName }}</NuxtLink
             >
           </div>
-          <a
-            href="#"
-            class="px-2 border border-t-2 text-slate-600 hover:text-slate-700"
-            >Daftar</a
-          >
-          <a href="#" class="px-2 text-slate-600 hover:text-slate-700">Login</a>
+          <NuxtLink>
+            <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
+              >Daftar
+            </a>
+          </NuxtLink>
+          <NuxtLink>
+            <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
+              >Login</a
+            >
+          </NuxtLink>
         </div>
       </div>
     </nav>
@@ -129,14 +151,13 @@
 </template>
 <script>
 export default {
-  //image looping v-for
   data() {
     return {
       navbar: [
         {
-          navbarName: "Beranda",
+          navbarName: "Cerita Usaha",
           image: "/img/beranda-act.png",
-          alt: "beranda",
+          alt: "Cerita Usaha",
           link: "/",
         },
         {
