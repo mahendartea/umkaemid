@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-[#e6e6e6]">
+  <div class="bg-[#e6e6e6] fixed top-0 w-full z-50">
+    <!-- navbar fixed with tailwindcss -->
+
     <nav class="px-5 m-auto flex items-center py-2 justify-between h-14">
       <div class="md:flex md:justify-between items-center md:w-1/3 w-1/2">
         <div class="md:flex justify-start items-center">
@@ -34,7 +36,7 @@
                 h-9
               "
             >
-              <font-awesome-icon icon="fa-search" class="text-white" />
+              <font-awesome-icon icon="fas fa-search" class="text-white" />
             </button>
           </div>
         </div>
@@ -52,7 +54,6 @@
           <NuxtLink :to="l.link" v-for="l in navbar" :key="l.id">
             <li
               class="
-                px-2
                 flex
                 text-slate-600 text-sm
                 hover:text-[#ebb22b]
@@ -69,12 +70,12 @@
               <img
                 :alt="l.alt"
                 :src="l.image"
-                class="mx-1"
+                class="mx-1 hidden lg:block"
                 height="23"
                 width="23"
                 :key="l.image"
               />
-              <p class="ml-2 lg:w-32 text-sm">{{ l.navbarName }}</p>
+              <p class="lg:w-32 text-sm">{{ l.navbarName }}</p>
             </li>
           </NuxtLink>
         </ul>
@@ -98,15 +99,22 @@
           <NuxtLink to="/register">
             <a
               href="#"
-              class="px-3 text-slate-600 hover:text-slate-700 py-1 rounded-md"
-              :class="{
-                'bg-[#ebb22b] text-white': $route.path === '/register',
-              }"
+              class="
+                px-3
+                py-1
+                rounded-md
+                bg-[#ebb22b]
+                hover:bg-yellow-300
+                text-white
+                transition
+                duration-300
+                ease-in-out
+              "
               >Daftar
             </a>
           </NuxtLink>
           <NuxtLink to="/login">
-            <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
+            <a href="#" class="px-2 text-slate-600 hover:text-slate-700 text-sm"
               >Login</a
             >
           </NuxtLink>
@@ -124,7 +132,8 @@
             flex flex-col
             items-center
             text-center
-            py-2rounded-b
+            py-2
+            rounded-b
           "
         >
           <div class="mb-2" v-for="ml in navbar" :key="ml.id">
@@ -134,12 +143,13 @@
               >{{ ml.navbarName }}</NuxtLink
             >
           </div>
-          <NuxtLink>
-            <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
-              >Daftar
-            </a>
+          <NuxtLink
+            to="/register"
+            class="w-2/3 rounded-md bg-[#ebb22b] text-white py-1"
+          >
+            <a href="#" class="px-2 hover:text-slate-700">Daftar </a>
           </NuxtLink>
-          <NuxtLink>
+          <NuxtLink to="/login">
             <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
               >Login</a
             >

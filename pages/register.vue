@@ -10,7 +10,7 @@
           />
         </div>
         <div class="space-y-5 md:w-1/2">
-          <h1 class="py-5 font-bold font-sans text-slate-700">
+          <h1 class="py-3 font-bold font-sans text-slate-700">
             Registerasi Akun
           </h1>
           <div v-for="form in formRegister" :key="form.id">
@@ -40,7 +40,7 @@
             </div>
           </div>
 
-          <div class="px-10 py-5 text-center leading-loose max-w-md">
+          <div class="px-10 py-3 text-center leading-loose max-w-md">
             <p class="text-xs text-slate-800 font-sans">
               Dengan mengklik Setuju & Daftar, Anda menyetujui
               <span class="text-blue-700">Syarat & Ketentuan</span> serta
@@ -80,28 +80,28 @@ export default {
       formRegister: [
         {
           forLabel: "username",
-          icon: "fa-solid fa-circle-user",
+          icon: "fas-solid fa-circle-user",
           name: "username",
           placeholder: "Masukan username anda..",
           type: "text",
         },
         {
           forLabel: "telp",
-          icon: "fa-solid fa-phone",
+          icon: "fas-solid fa-phone",
           name: "telp",
           placeholder: "Masukan telpon anda..",
           type: "text",
         },
         {
           forLabel: "email",
-          icon: "fa-solid fa-envelope",
+          icon: "fas-solid fa-envelope",
           name: "email",
           placeholder: "Masukan email anda..",
           type: "text",
         },
         {
           forLabel: "password",
-          icon: "fa-solid fa-lock",
+          icon: "fas-solid fa-lock",
           name: "password",
           placeholder: "Masukan password anda..",
           type: "password",
