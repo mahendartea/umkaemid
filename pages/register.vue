@@ -47,25 +47,7 @@
               <span class="text-blue-700">Kebijakan Privasi</span> dari
               uemkaem.id
             </p>
-            <button
-              type="button"
-              class="
-                bg-[#ebb22b]
-                hover:bg-yellow-300
-                text-white
-                w-3/4
-                rounded
-                px-5
-                py-2
-                my-5
-                text-sm
-                transition
-                duration-300
-                ease-in-out
-              "
-            >
-              Setuju & Daftar
-            </button>
+            <Button>Setuju & Daftar</Button>
           </div>
         </div>
       </div>

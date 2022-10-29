@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#e6e6e6] fixed top-0 w-full z-50">
+  <div class="bg-[#e6e6e6] fixed top-0 w-full z-50 drop-shadow">
     <!-- navbar fixed with tailwindcss -->
 
     <nav class="px-5 m-auto flex items-center py-2 justify-between h-14">
@@ -114,7 +114,10 @@
             </a>
           </NuxtLink>
           <NuxtLink to="/login">
-            <a href="#" class="px-2 text-slate-600 hover:text-slate-700 text-sm"
+            <a
+              href="#"
+              class="px-2 text-slate-600 hover:text-slate-700 text-sm"
+              :class="{ 'text-[#ebb22b]': $route.path === '/login' }"
               >Login</a
             >
           </NuxtLink>
@@ -150,7 +153,10 @@
             <a href="#" class="px-2 hover:text-slate-700">Daftar </a>
           </NuxtLink>
           <NuxtLink to="/login">
-            <a href="#" class="px-2 text-slate-600 hover:text-slate-700"
+            <a
+              href="#"
+              class="px-2 text-slate-600 hover:text-slate-700"
+              :class="{ 'text-[#ebb22b]': $route.path === '/login' }"
               >Login</a
             >
           </NuxtLink>
