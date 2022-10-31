@@ -1,0 +1,5 @@
+<template>
+  <NuxtLayout>
+    <div class="mt-20 font-bold">Cerita Usaha</div>
+  </NuxtLayout>
+</template>

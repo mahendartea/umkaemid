@@ -1,6 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-   build: {
+  build: {
     postcss: {
       postcssOptions: {
         plugins: {
@@ -9,9 +9,9 @@ export default defineNuxtConfig({
         },
       },
     },
-  }, 
-    css: [
+  },
+  css: [
     '@/assets/css/main.css',
-     '@fortawesome/fontawesome-svg-core/styles.css'
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 })
