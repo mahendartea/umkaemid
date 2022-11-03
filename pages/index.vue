@@ -49,10 +49,10 @@
             flex flex-col
             justify-between
             border border-gray-200
-            p-2
+            p-0
           "
         >
-          <div class="flex items-center justify-start my-2">
+          <div class="flex items-center justify-start m-2 p-4">
             <img
               class="w-8 h-8 rounded-full object-cover object-center"
               :src="item.image"
@@ -84,7 +84,7 @@
                     class="text-gray-500"
                   />
                 </div>
-                <p class="text-gray-500 text-sm">Product</p>
+                <p class="text-gray-500 text-sm">Product and description</p>
               </div>
               <div class="flex item-center space-x-4">
                 <div class="flex item-center">
@@ -97,8 +97,8 @@
               </div>
             </div>
           </div>
-          <div class="flex p-4 border-t border-gray-200 justify-between">
-            <div class="flex items-center justify-between my-3 w-full">
+          <div class="flex p-2 border-t border-gray-200 justify-between">
+            <div class="flex items-center justify-between my-2 w-full">
               <!-- icon media social like comment share with fontawesome -->
               <div class="flex item-center space-x-4">
                 <div
@@ -161,6 +161,26 @@
                   </div>
                   <p class="text-gray-500 text-sm">1 jam yang lalu</p>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex item-center justify-center my-2 px-2 w-full">
+            <div class="flex item-center justify-between space-x-4">
+              <div class="flex item-center">
+                <img
+                  class="w-8 h-8 rounded-full object-cover object-center"
+                  :src="item.image"
+                />
+              </div>
+              <div class="flex item-center">
+                <input
+                  type="text"
+                  class="w-full h-8 rounded-full bg-gray-100 text-gray-500 px-2"
+                  placeholder="Tulis komentar..."
+                />
+              </div>
+              <div>
+                <font-awesome-icon icon="fa-solid fa-paper-plane" />
               </div>
             </div>
           </div>
