@@ -1,39 +1,34 @@
 <template>
   <NuxtLayout>
-    <div class="flex item-center justify-center mt-20">
-      <p
-        class="
-          text-xl
-          py-2
-          px-1
-          bg-yellow-500
-          text-white
-          rounded-sm
-          my-5
-          w-full
-          text-center
-          shadow-lg
-          mx-2
-        "
+    <div class="flex flex-wrap justify-center">
+      <div
+        class="w-full md:w-1/2 p-2 flex flex-col justify-center items-center"
       >
-        Cerita Usaha
-      </p>
+        <p
+          class="
+            text-xl
+            py-2
+            px-1
+            bg-yellow-500
+            text-white
+            rounded-sm
+            my-4
+            w-full
+            text-center
+            shadow-lg
+            mx-2
+          "
+        >
+          Cerita Usaha
+        </p>
+      </div>
     </div>
     <!-- card mobile with tailwindcss -->
 
     <!-- card media social tailwind-->
     <div class="flex flex-wrap justify-center">
       <div
-        class="
-          w-full
-          md:w-1/2
-          lg:w-1/3
-          xl:w-1/4
-          p-2
-          flex flex-col
-          justify-center
-          items-center
-        "
+        class="w-full md:w-1/2 p-2 flex flex-col justify-center items-center"
       >
         <div
           v-for="item in data"
