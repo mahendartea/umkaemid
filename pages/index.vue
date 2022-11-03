@@ -23,12 +23,20 @@
         </p>
       </div>
     </div>
-    <!-- card mobile with tailwindcss -->
 
-    <!-- card media social tailwind-->
     <div class="flex flex-wrap justify-center">
       <div
-        class="w-full md:w-1/2 p-2 flex flex-col justify-center items-center"
+        class="
+          w-full
+          md:w-1/2
+          lg:w-5/6
+          p-2
+          flex flex-col
+          lg:grid lg:grid-cols-3
+          gap-4
+          justify-center
+          items-center
+        "
       >
         <div
           v-for="item in data"
@@ -62,11 +70,27 @@
             />
           </div>
           <div class="p-4">
-            <h2 class="text-lg font-semibold text-gray-800">Cerita Usaha</h2>
-            <p class="text-gray-700 text-sm mb-2">
+            <h2 class="text-lg font-semibold text-gray-800 mb-2">
+              Cerita Usaha
+            </h2>
+            <p
+              class="
+                text-gray-700 text-sm
+                mb-2
+                first-letter:text-7xl
+                first-letter:font-bold
+                first-letter:text-slate-900
+                first-letter:mr-3
+                first-letter:float-left
+              "
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               voluptates, quod, quia, voluptate quae voluptatem quibusdam
-              voluptatibus quidem quos quas.
+              voluptatibus
+              <span
+                class="font-semibold block hover:text-yellow-700 cursor-pointer"
+                >Selengkapnya..</span
+              >
             </p>
           </div>
           <div class="px-4">
