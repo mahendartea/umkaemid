@@ -1,8 +1,11 @@
 <template>
   <NuxtLayout>
     <div class="flex flex-wrap justify-center">
-      <div class="w-full md:w-1/2 p-2 flex flex-col justify-center items-center">
-        <p class="
+      <div
+        class="w-full md:w-1/2 p-2 flex flex-col justify-center items-center"
+      >
+        <p
+          class="
             text-xl
             p-2
             bg-yellow-500
@@ -13,13 +16,15 @@
             text-center
             shadow-lg
             mx-2
-          ">
+          "
+        >
           Cerita Usaha
         </p>
       </div>
     </div>
     <div class="flex flex-wrap justify-center mb-5">
-      <div class="
+      <div
+        class="
           w-full
           md:w-1/2
           lg:w-5/6
@@ -29,8 +34,12 @@
           gap-4
           justify-center
           items-center
-        ">
-        <div v-for="item in data" :key="item.id" class="
+        "
+      >
+        <div
+          v-for="item in data"
+          :key="item.id"
+          class="
             my-2
             w-full
             h-full
@@ -42,10 +51,18 @@
             justify-between
             border border-gray-200
             p-0
-          ">
+          "
+        >
           <!-- component card -->
-          <card-cerita :imageProfile="item.imageProfile" :nameProfile="item.nameProfile" :image="item.image"
-            :judul="item.title" :like="item.counLike" :comments="item.countComment" :productDesc="item.description"/>
+          <card-cerita
+            :imageProfile="item.imageProfile"
+            :nameProfile="item.nameProfile"
+            :image="item.image"
+            :judul="item.title"
+            :like="item.counLike"
+            :comments="item.countComment"
+            :productDesc="item.description"
+          />
           <!-- end component card -->
         </div>
       </div>
@@ -53,83 +70,86 @@
   </NuxtLayout>
 </template>
 <script>
-  import CardCerita from "~~/components/CardCerita.vue";
-  // card product
-  export default {
-    components: {CardCerita},
-    //   data to cardCerita
-    data() {
-      return {
-        data: [
-          {
-            id: 1,
-            imageProfile: "https://uemkaem.id/images/logo/thumbnail/1661330604.jpeg",
-            nameProfile: "Sketsa Mandiri",
-            title: "Desain Kabinet untuk flat TV",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-            image: "https://uemkaem.id/images/news/1661329928.jpeg",
-            counLike: 10,
-            countComment: 2
-          },
-          {
-            id: 2,
-            imageProfile: "https://uemkaem.id/images/logo/thumbnail/1661157242.png",
-            nameProfile: "Kobar Tanamama",
-            title: "Cerita Usaha 2",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-            image: "https://uemkaem.id/images/news/1658474823.jpeg",
-            counLike: 12,
-            countComment: 2
-          },
-          {
-            id: 3,
-            imageProfile: "https://uemkaem.id/images/logo/thumbnail/1661157242.png",
-            nameProfile: "Kobar Tanamama",
-            title: "Cerita Usaha 3",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-            image: "https://uemkaem.id/images/news/1658473611.jpeg",
-            counLike: 4,
-            countComment: 1
-
-          },
-          {
-            id: 4,
-            imageProfile: "https://uemkaem.id/images/logo/thumbnail/1661157242.png",
-            nameProfile: "Kobar Tanamama",
-            title: "Cerita Usaha 4",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-            image: "https://uemkaem.id/images/news/1658473574.jpeg",
-            counLike: 10,
-            countComment: 2
-          },
-          {
-            id: 5,
-            imageProfile: "https://uemkaem.id/images/logo/thumbnail/1661157242.png",
-            nameProfile: "Kobar Tanamama",
-            title: "Kobar Tanamama",
-            description:
-              "Pempek paket harga lebih ekonomis, yuk dipesen 😊😊😊 ",
-            image: "https://uemkaem.id/images/news/1658473549.jpeg",
-            counLike: 10,
-            countComment: 2
-          },
-          {
-            id: 6,
-            imageProfile: "https://picsum.photos/seed/picsum/200/300",
-            nameProfile: "Toko Sebarguna",
-            title: "Cerita Usaha Lainnya",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-            image: "https://picsum.photos/200/300",
-            counLike: 10,
-            countComment: 2
-          },
-        ],
-      };
-    },
-  };
+import CardCerita from "~~/components/CardCerita.vue";
+// card product
+export default {
+  components: { CardCerita },
+  //   data to cardCerita
+  data() {
+    return {
+      data: [
+        {
+          id: 1,
+          imageProfile:
+            "https://uemkaem.id/images/logo/thumbnail/1661330604.jpeg",
+          nameProfile: "Sketsa Mandiri",
+          title: "Desain Kabinet untuk flat TV",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          image: "https://uemkaem.id/images/news/1661329928.jpeg",
+          counLike: 10,
+          countComment: 2,
+        },
+        {
+          id: 2,
+          imageProfile:
+            "https://uemkaem.id/images/logo/thumbnail/1661157242.png",
+          nameProfile: "Kobar Tanamama",
+          title: "Cerita Usaha 2",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          image: "https://uemkaem.id/images/news/1658474823.jpeg",
+          counLike: 12,
+          countComment: 2,
+        },
+        {
+          id: 3,
+          imageProfile:
+            "https://uemkaem.id/images/logo/thumbnail/1661157242.png",
+          nameProfile: "Kobar Tanamama",
+          title: "Cerita Usaha 3",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          image: "https://uemkaem.id/images/news/1658473611.jpeg",
+          counLike: 4,
+          countComment: 1,
+        },
+        {
+          id: 4,
+          imageProfile:
+            "https://uemkaem.id/images/logo/thumbnail/1661157242.png",
+          nameProfile: "Kobar Tanamama",
+          title: "Cerita Usaha 4",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          image: "https://uemkaem.id/images/news/1658473574.jpeg",
+          counLike: 10,
+          countComment: 2,
+        },
+        {
+          id: 5,
+          imageProfile:
+            "https://uemkaem.id/images/logo/thumbnail/1661157242.png",
+          nameProfile: "Kobar Tanamama",
+          title: "Kobar Tanamama",
+          description: "Pempek paket harga lebih ekonomis, yuk dipesen 😊😊😊 ",
+          image: "https://uemkaem.id/images/news/1658473549.jpeg",
+          counLike: 10,
+          countComment: 2,
+        },
+        {
+          id: 6,
+          imageProfile: "https://picsum.photos/seed/picsum/200/300",
+          nameProfile: "Toko Sebarguna",
+          title: "Cerita Usaha Lainnya",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          image: "https://picsum.photos/200/300",
+          counLike: 10,
+          countComment: 2,
+        },
+      ],
+    };
+  },
+};
 </script>

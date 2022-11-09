@@ -57,7 +57,6 @@
               Simpan akun saya
             </label>
           </div>
-
           <div class="px-10 text-center leading-loose max-w-md">
             <Button>Login</Button>
           </div>
