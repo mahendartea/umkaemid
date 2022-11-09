@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <div class="mt-14">
+    <div class="mt-14 mb-10">
       <slot />
     </div>
     <Footer />
