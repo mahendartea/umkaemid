@@ -1,0 +1,103 @@
+{
+    "id": "marketplace",
+    "type": "store",
+    "name": "Marketplace",
+    "description": "Marketplace",
+    "url": "https://marketplace.com",
+    "logo": "https://marketplace.com/logo.png",
+    "categories": [
+        {
+            "id": "marketplace",
+            "name": "Marketplace",
+            "description": "Marketplace",
+            "url": "https://marketplace.com",
+            "logo": "https://marketplace.com/logo.png"
+        }
+    ],
+    "products": [
+        {
+            "id": "product1",
+            "name": "Product 1",
+            "description": "Product 1",
+            "url": "https://marketplace.com/product1",
+            "logo": "https://marketplace.com/product1/logo.png",
+            "categories": [
+                {
+                    "id": "marketplace",
+                    "name": "Marketplace",
+                    "description": "Marketplace",
+                    "url": "https://marketplace.com",
+                    "logo": "https://marketplace.com/logo.png"
+                }
+            ]
+        },
+        {
+            "id": "product2",
+            "name": "Product 2",
+            "description": "Product 2",
+            "url": "https://marketplace.com/product2",
+            "logo": "https://marketplace.com/product2/logo.png",
+            "categories": [
+                {
+                    "id": "marketplace",
+                    "name": "Marketplace",
+                    "description": "Marketplace",
+                    "url": "https://marketplace.com",
+                    "logo": "https://marketplace.com/logo.png"
+                }
+            ]
+        },
+        {
+            "id": "product3",
+            "name": "Product 3",
+            "description": "Product 3",
+            "url": "https://marketplace.com/product3",
+            "logo": "https://marketplace.com/product3/logo.png",
+            "categories": [
+                {
+                    "id": "marketplace",
+                    "name": "Marketplace",
+                    "description": "Marketplace",
+                    "url": "https://marketplace.com",
+                    "logo": "https://marketplace.com/logo.png"
+                }
+            ]
+        }
+    ],
+    "offers": [
+        {
+            "id": "offer1",
+            "name": "Offer 1",
+            "description": "Offer 1",
+            "url": "https://marketplace.com/offer1",
+            "logo": "https://marketplace.com/offer1/logo.png",
+            "categories": [
+                {
+                    "id": "marketplace",
+                    "name": "Marketplace",
+                    "description": "Marketplace",
+                    "url": "https://marketplace.com",
+                    "logo": "https://marketplace.com/logo.png"
+                }
+            ],
+            "products": [
+                {
+                    "id": "product1",
+                    "name": "Product 1",
+                    "description": "Product 1",
+                    "url": "https://marketplace.com/product1",
+                    "logo": "https://marketplace.com/product1/logo.png",
+                    "categories": [
+                        {
+                            "id": "marketplace",
+                            "name": "Marketplace",
+                            "description": "Marketplace",
+                            "url": "https://marketplace.com",
+                            "logo": "https://marketplace.com/logo.png"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

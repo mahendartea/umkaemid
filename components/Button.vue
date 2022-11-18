@@ -1,6 +1,5 @@
 <template>
-  <button
-    class="
+  <button class="
       bg-[#ebb22b]
       hover:bg-yellow-300
       text-white
@@ -13,9 +12,7 @@
       transition
       duration-300
       ease-in-out
-    "
-    type="button"
-  >
+    " type="button">
     <slot />
   </button>
 </template>

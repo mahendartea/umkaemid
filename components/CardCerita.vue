@@ -1,14 +1,21 @@
 <template>
   <!-- card tailwind with props -->
   <div class="flex items-center justify-start m-2 p-2">
-    <img class="w-8 h-8 rounded-full object-cover object-center" :src="imageProfile" />
+    <img
+      class="w-8 h-8 rounded-full object-cover object-center"
+      :src="imageProfile"
+    />
     <p class="py-2 mx-2">{{ nameProfile }}</p>
   </div>
   <div class="w-full h-48 overflow-hidden">
-    <img class="w-full h-full object-cover object-center" :src="image" alt="card" />
+    <img
+      class="w-full h-full object-cover object-center"
+      :src="image"
+      alt="card"
+    />
   </div>
   <div class="px-4 my-2">
-    <p class="text-md font-semibold text-gray-800 ">{{ judul }}</p>
+    <p class="text-md font-semibold text-gray-800">{{ judul }}</p>
   </div>
   <div class="px-4">
     <!-- product description -->
@@ -17,11 +24,14 @@
         <div class="flex item-center">
           <font-awesome-icon :icon="['fas', 'tag']" class="text-gray-500" />
         </div>
-        <p class="text-gray-500 text-sm pr-5">{{productDesc}}</p>
+        <p class="text-gray-500 text-sm pr-5">{{ productDesc }}</p>
       </div>
       <div class="flex item-center space-x-4">
         <div class="flex item-center">
-          <font-awesome-icon :icon="['fas', 'map-marker-alt']" class="text-gray-500" />
+          <font-awesome-icon
+            :icon="['fas', 'map-marker-alt']"
+            class="text-gray-500"
+          />
           <!-- <font-awesome-icon icon="far-regular fa-map-marker-alt" class="text-gray-500" /> -->
         </div>
         <p class="text-gray-500 text-sm">Lokasi</p>
@@ -32,43 +42,31 @@
     <div class="flex items-center justify-between my-2 w-full px-4">
       <!-- icon media social like comment share with fontawesome -->
       <div class="flex item-center gap-4">
-        <div class="
-            flex
-            items-center
-            justify-center
-            w-8
-            h-8
-            rounded-full
-          ">
+        <div class="flex items-center justify-center w-8 h-8 rounded-full">
           <div class="flex gap-1 items-center">
-            <font-awesome-icon :icon="['fas', 'thumbs-up']" class="text-red-500" />
+            <font-awesome-icon
+              :icon="['fas', 'thumbs-up']"
+              class="text-red-500"
+            />
           </div>
-          <span class="text-sm mx-1 text-gray-500">{{like}}</span>
+          <span class="text-sm mx-1 text-gray-500">{{ like }}</span>
           <!-- <font-awesome-icon icon="fas-regular fa-thumbs-up" class="text-red-500" /> -->
         </div>
-        <div class="
-            flex
-            items-center
-            justify-center
-            w-8
-            h-8
-            rounded-full
-          ">
+        <div class="flex items-center justify-center w-8 h-8 rounded-full">
           <div class="mx-1">
-            <font-awesome-icon :icon="['fas', 'comments']" class="text-gray-500" />
+            <font-awesome-icon
+              :icon="['fas', 'comments']"
+              class="text-gray-500"
+            />
           </div>
-          <span class="text-sm mx-1 text-gray-500">{{comments}}</span>
+          <span class="text-sm mx-1 text-gray-500">{{ comments }}</span>
           <!-- <font-awesome-icon icon="fas-regular fa-comment" class="text-gray-500" /> -->
         </div>
-        <div class="
-            flex
-            items-center
-            justify-center
-            w-8
-            h-8
-            rounded-full
-          ">
-          <font-awesome-icon :icon="['fas', 'share-square']" class="text-gray-500" />
+        <div class="flex items-center justify-center w-8 h-8 rounded-full">
+          <font-awesome-icon
+            :icon="['fas', 'share-square']"
+            class="text-gray-500"
+          />
           <!-- <font-awesome-icon icon="fas-regular fa-share-square" class="text-gray-500" /> -->
         </div>
       </div>
@@ -87,52 +85,62 @@
   <div class="flex item-center justify-center my-5 px-2 w-full">
     <div class="flex item-center justify-between space-x-4">
       <div class="flex item-center">
-        <img class="w-8 h-8 rounded-full object-cover object-center" :src="image" />
+        <img
+          class="w-8 h-8 rounded-full object-cover object-center"
+          :src="image"
+        />
       </div>
       <div class="flex item-center">
-        <input type="text" class="w-full h-8 rounded-full bg-gray-100 text-gray-500 px-2"
-          placeholder="Tulis komentar..." />
+        <input
+          type="text"
+          class="w-full h-8 rounded-full bg-gray-100 text-gray-500 px-2"
+          placeholder="Tulis komentar..."
+        />
       </div>
       <div>
-        <font-awesome-icon :icon="['fas', 'paper-plane']" class="text-gray-500" />
+        <font-awesome-icon
+          :icon="['fas', 'paper-plane']"
+          class="text-gray-500"
+        />
         <!-- <font-awesome-icon icon="paper-plane" class="icon alt" /> -->
       </div>
     </div>
   </div>
 </template>
+
 <script>
-  // props
-  export default {
-    //  props card
-    props: {
-      imageProfile: {
-        type: String,
-        default: "https://picsum.photos/seed/picsum/200/300",
-      },
-      nameProfile: {
-        type: String,
-        default: "Nama Profile",
-      },
-      image: {
-        type: String,
-        default: "https://picsum.photos/200/300",
-      },
-      judul: {
-        type: String,
-        default: "Judul Cerita",
-      },
-      like: {
-        type: Number,
-        default: 2
-      },
-      comments: {
-        type: Number,
-        default: 2
-      },
-      productDesc:{ 
-        type: String,
-        default: "Product Desc"
-      },
+// props
+export default {
+  //  props card
+  props: {
+    imageProfile: {
+      type: String,
+      default: "https://picsum.photos/seed/picsum/200/300",
     },
-  };
+    nameProfile: {
+      type: String,
+      default: "Nama Profile",
+    },
+    image: {
+      type: String,
+      default: "https://picsum.photos/200/300",
+    },
+    judul: {
+      type: String,
+      default: "Judul Cerita",
+    },
+    like: {
+      type: Number,
+      default: 0,
+    },
+    comments: {
+      type: Number,
+      default: 0,
+    },
+    productDesc: {
+      type: String,
+      default: "Product Desc",
+    },
+  },
+};
 </script>

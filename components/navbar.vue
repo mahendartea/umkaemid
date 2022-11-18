@@ -183,10 +183,10 @@ export default {
           link: "/newsfeed",
         },
         {
-          navbarName: "Marketplace",
+          navbarName: "Marketpreneur",
           image: "/img/marketplace-non.png",
-          alt: "marketplace",
-          link: "/marketplace",
+          alt: "markets",
+          link: "/markets",
         },
       ],
       showMenu: false,
