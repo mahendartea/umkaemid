@@ -19,17 +19,9 @@
             >
               <label
                 :for="form.forLabel"
-                class="
-                  flex
-                  items-center
-                  px-3
-                  py-2
-                  bg-slate-200
-                  rounded-l-md
-                  border-r border-slate-500
-                "
+                class="flex items-center px-3 py-2 bg-slate-200 rounded-l-md border-r border-slate-500"
               >
-                <font-awesome-icon :icon="form.icon" class="text-slate-700" />
+                <Icon :name="form.icon" class="text-slate-700" />
               </label>
               <input
                 :name="form.name"
@@ -62,28 +54,28 @@ export default {
       formRegister: [
         {
           forLabel: "username",
-          icon: "fas-solid fa-circle-user",
+          icon: "mdi:user-circle-outline",
           name: "username",
           placeholder: "Masukan username anda..",
           type: "text",
         },
         {
           forLabel: "telp",
-          icon: "fas-solid fa-phone",
+          icon: "ic:baseline-phone",
           name: "telp",
           placeholder: "Masukan telpon anda..",
           type: "text",
         },
         {
           forLabel: "email",
-          icon: "fas-solid fa-envelope",
+          icon: "material-symbols:alternate-email",
           name: "email",
           placeholder: "Masukan email anda..",
           type: "text",
         },
         {
           forLabel: "password",
-          icon: "fas-solid fa-lock",
+          icon: "carbon:password",
           name: "password",
           placeholder: "Masukan password anda..",
           type: "password",

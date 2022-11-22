@@ -17,17 +17,9 @@
             >
               <label
                 :for="form.forLabel"
-                class="
-                  flex
-                  items-center
-                  px-3
-                  py-2
-                  bg-slate-200
-                  rounded-l-md
-                  border-r border-slate-500
-                "
+                class="flex items-center px-3 py-2 bg-slate-200 rounded-l-md border-r border-slate-500"
               >
-                <font-awesome-icon :icon="form.icon" class="text-slate-700" />
+                <Icon :name="form.icon" class="text-slate-700" />
               </label>
               <input
                 :name="form.name"
@@ -43,15 +35,7 @@
               type="checkbox"
               name="remember"
               id="remember"
-              class="
-                h-4
-                w-4
-                text-blue-600
-                focus:ring-blue-500
-                border-gray-300
-                rounded
-                mx-2
-              "
+              class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded mx-2"
             />
             <label for="remember" class="block text-sm text-gray-900">
               Simpan akun saya
@@ -73,14 +57,14 @@ export default {
       formLogin: [
         {
           forLabel: "email",
-          icon: "fas-solid fa-envelope",
+          icon: "material-symbols:alternate-email",
           name: "email",
           placeholder: "Masukan email anda..",
           type: "text",
         },
         {
           forLabel: "password",
-          icon: "fas-solid fa-lock",
+          icon: "carbon:password",
           name: "password",
           placeholder: "Masukan password anda..",
           type: "password",

@@ -22,60 +22,42 @@
     <div class="flex item-center justify-between my-2">
       <div class="flex item-center space-x-4">
         <div class="flex item-center">
-          <font-awesome-icon :icon="['fas', 'tag']" class="text-gray-500" />
+          <Icon class="text-gray-500" name="mdi:tag" />
         </div>
         <p class="text-gray-500 text-sm pr-5">{{ productDesc }}</p>
       </div>
       <div class="flex item-center space-x-4">
         <div class="flex item-center">
-          <font-awesome-icon
-            :icon="['fas', 'map-marker-alt']"
-            class="text-gray-500"
-          />
-          <!-- <font-awesome-icon icon="far-regular fa-map-marker-alt" class="text-gray-500" /> -->
+          <Icon name="material-symbols:location-on" class="text-gray-500" />
         </div>
-        <p class="text-gray-500 text-sm">Lokasi</p>
+        <p class="text-gray-500 text-sm">Jakarta</p>
       </div>
     </div>
   </div>
   <div class="flex item-center p-2 border-t border-gray-200 justify-between">
     <div class="flex items-center justify-between my-2 w-full px-4">
-      <!-- icon media social like comment share with fontawesome -->
       <div class="flex item-center gap-4">
         <div class="flex items-center justify-center w-8 h-8 rounded-full">
           <div class="flex gap-1 items-center">
-            <font-awesome-icon
-              :icon="['fas', 'thumbs-up']"
-              class="text-red-500"
-            />
+            <Icon name="bi:hand-thumbs-up-fill" class="text-red-600" />
           </div>
           <span class="text-sm mx-1 text-gray-500">{{ like }}</span>
-          <!-- <font-awesome-icon icon="fas-regular fa-thumbs-up" class="text-red-500" /> -->
         </div>
         <div class="flex items-center justify-center w-8 h-8 rounded-full">
           <div class="mx-1">
-            <font-awesome-icon
-              :icon="['fas', 'comments']"
-              class="text-gray-500"
-            />
+            <Icon name="fa6-regular:comments" />
           </div>
           <span class="text-sm mx-1 text-gray-500">{{ comments }}</span>
-          <!-- <font-awesome-icon icon="fas-regular fa-comment" class="text-gray-500" /> -->
         </div>
         <div class="flex items-center justify-center w-8 h-8 rounded-full">
-          <font-awesome-icon
-            :icon="['fas', 'share-square']"
-            class="text-gray-500"
-          />
-          <!-- <font-awesome-icon icon="fas-regular fa-share-square" class="text-gray-500" /> -->
+          <Icon name="ri:share-forward-2-fill" />
         </div>
       </div>
       <div class="flex item-center justify-between space-x-4">
         <!-- human time and info -->
         <div class="flex item-center space-x-4">
           <div class="flex item-center">
-            <font-awesome-icon :icon="['fas', 'clock']" class="text-gray-500" />
-            <!-- <font-awesome-icon icon="fas-regular fa-clock" class="text-gray-500" /> -->
+            <Icon name="mdi:clock-outline" />
           </div>
           <p class="text-gray-500 text-sm">1 jam yang lalu</p>
         </div>
@@ -98,11 +80,12 @@
         />
       </div>
       <div>
-        <font-awesome-icon
-          :icon="['fas', 'paper-plane']"
+        <Icon
+          name="ri:send-plane-fill"
+          width="28"
+          height="28"
           class="text-gray-500"
         />
-        <!-- <font-awesome-icon icon="paper-plane" class="icon alt" /> -->
       </div>
     </div>
   </div>
