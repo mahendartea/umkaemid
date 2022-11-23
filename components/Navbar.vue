@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-[#e6e6e6] fixed top-0 w-full z-50 drop-shadow">
+  <div
+    class="bg-[#e6e6e6] fixed top-0 w-full z-50 drop-shadow backdrop-blur-xl bg-white/30"
+  >
     <!-- navbar fixed with tailwindcss -->
 
     <nav class="px-5 m-auto flex items-center py-2 justify-between h-14">
@@ -22,7 +24,6 @@
                 :horizontalFlip="true"
                 class="text-white"
               />
-              <!-- <font-awesome-icon icon="fas fa-search" class="text-white" /> -->
             </button>
           </div>
         </div>
@@ -55,7 +56,6 @@
           @click="showMenu = !showMenu"
           class="md:hidden border border-slate-600/20 px-4 py-1 rounded hover:bg-slate-300"
         >
-          <!-- <font-awesome-icon icon="fa-solid fa-bars" class="text-slate-500" /> -->
           <Icon
             name="ic:baseline-menu"
             class="text-slate-500"
@@ -63,16 +63,24 @@
             width="28"
           />
         </button>
-        <div class="hidden md:flex">
+        <div class="hidden md:flex md:items-center">
           <NuxtLink
             to="/register"
-            class="px-3 py-1 rounded-md bg-[#ebb22b] hover:bg-yellow-300 text-white transition duration-300 ease-in-out"
+            class="mx-1 px-3 py-1 hover:bg-yellow-500 hover:rounded-md text-md font-semibold"
+            :class="{
+              'rounded-md bg-[#ebb22b] hover:bg-yellow-300 text-white transition duration-300 ease-in-out':
+                $route.path === '/register',
+            }"
           >
             Daftar
           </NuxtLink>
           <NuxtLink
             to="/login"
-            class="px-2 text-slate-600 hover:text-slate-700 text-sm"
+            class="px-3 py-1 hover:bg-yellow-500 hover:rounded-md text-sm"
+            :class="{
+              'rounded-md bg-[#ebb22b] hover:bg-yellow-300 text-white transition duration-300 ease-in-out':
+                $route.path === '/login',
+            }"
           >
             Login
           </NuxtLink>
@@ -95,13 +103,12 @@
           >
             <a href="#" class="px-2 hover:text-slate-700">Daftar </a>
           </NuxtLink>
-          <NuxtLink to="/login">
-            <a
-              href="#"
-              class="px-2 text-slate-600 hover:text-slate-700"
-              :class="{ 'text-[#ebb22b]': $route.path === '/login' }"
-              >Login</a
-            >
+          <NuxtLink
+            to="/login"
+            class="px-2 text-slate-600 hover:text-slate-700"
+            :class="{ 'text-[#ebb22b]': $route.path === '/login' }"
+          >
+            Login
           </NuxtLink>
         </div>
       </div>

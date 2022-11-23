@@ -4,6 +4,6 @@
     <div class="mt-14 mb-10">
       <slot />
     </div>
-    <Footer />
+    <!-- <DivFooter /> -->
   </div>
 </template>

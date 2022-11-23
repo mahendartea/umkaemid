@@ -35,6 +35,7 @@
       </div>
     </div>
   </NuxtLayout>
+  <DivFooter />
 </template>
 
 <script setup>
