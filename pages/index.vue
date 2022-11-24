@@ -7,7 +7,7 @@
         <p
           class="text-xl p-2 bg-yellow-500 text-white rounded-sm my-4 w-full text-center shadow-lg mx-2"
         >
-          Cerita Usaha
+          CERITA USAHA
         </p>
       </div>
     </div>
