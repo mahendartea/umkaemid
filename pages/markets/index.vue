@@ -1,5 +1,9 @@
 <template>
   <NuxtLayout>
+    <Head>
+      <Title>Uemkaem.id | Marketsplace</Title>
+      <Meta name="description" content="Home website uemkaemid Indonesia" />
+    </Head>
     <h1>Ini Markets</h1>
   </NuxtLayout>
 </template>

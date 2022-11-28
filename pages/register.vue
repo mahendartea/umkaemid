@@ -1,5 +1,9 @@
 <template>
   <NuxtLayout>
+    <Head>
+      <Title>Uemkaem.id | Register</Title>
+      <Meta name="description" content="Home website uemkaemid Indonesia" />
+    </Head>
     <div class="p-10 item-center h-full bg-[#F8FAFC]">
       <div class="md:flex md:m-auto md:container">
         <div class="hidden md:flex items-center md:w-1/2 md:mr-20 md:m-auto">
@@ -44,6 +48,7 @@
         </div>
       </div>
     </div>
+    <DivFooter />
   </NuxtLayout>
 </template>
 

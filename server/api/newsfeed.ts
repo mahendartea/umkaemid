@@ -28,6 +28,24 @@ export default defineEventHandler(() => {
         author: "uemkaemid",
         createdat: "29 Mar 2022 - 09:53",
       },
+      {
+        id: 4,
+        title: "Lima Tips Pertahankan Bisnis UMKM Di Tengah P...",
+        imageProfile: "https://uemkaem.id/images/news/1628220345.png",
+        description:
+          "Jika Anda adalah pelaku UMKM dan ingin terus mempertahankan bisnisnya di kala pandemi saat ini, berikut 5 tips mempertahankan bisnis UMKM di tengah pandemi COVID-19. Simak pembahasannya!",
+        author: "uemkaemid",
+        createdat: "29 Mar 2022 - 09:53",
+      },
+      {
+        id: 5,
+        title: "Catat, Begini 5 Tips Dan Trik Hindari Bisnis...",
+        imageProfile: "https://uemkaem.id/images/news/1628137329.jpg",
+        description:
+          "Supaya bisnis yang sedang dilakoni tidak jalan ditempat, Anda perlu mempersiapkan strategi perencanaan terlebih dulu.",
+        author: "uemkaemid",
+        createdat: "29 Mar 2022 - 09:53",
+      },
     ],
   };
 });

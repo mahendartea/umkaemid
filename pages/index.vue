@@ -1,5 +1,9 @@
 <template>
   <NuxtLayout>
+    <Head>
+      <Title>Uemkaem.id | Home</Title>
+      <Meta name="description" content="Home website uemkaemid Indonesia" />
+    </Head>
     <div class="flex flex-wrap justify-center">
       <div
         class="w-full md:w-5/6 p-2 flex flex-col justify-center items-center"
