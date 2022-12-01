@@ -16,37 +16,21 @@
       </div>
     </div>
     <div class="flex flex-wrap justify-center mb-5">
-      <div
-        class="w-full md:w-1/2 lg:w-5/6 p-2 flex flex-col lg:grid lg:grid-cols-3 gap-4 justify-center items-center"
-      >
-        <div v-if="pending">Loading..</div>
-        <div
-          v-else
-          v-for="item in data.cerita"
-          :key="item.id"
-          class="my-2 w-full h-full bg-white shadow-lg rounded-lg overflow-hidden flex flex-col justify-between border border-gray-200 p-0"
-        >
-          <!-- component card -->
-          <card-cerita
-            :imageProfile="item.imageProfile"
-            :nameProfile="item.nameProfile"
-            :image="item.image"
-            :judul="item.title"
-            :like="item.counLike"
-            :comments="item.countComment"
-            :productDesc="item.description"
-          />
-          <!-- end component card -->
-        </div>
-      </div>
+      <Suspense>
+        <!-- component card -->
+        <CardCerita />
+
+        <!-- end component card -->
+        <template #fallback>
+          <!-- Loading component -->
+          <Loader />
+          <!-- end loading component -->
+        </template>
+      </Suspense>
     </div>
     <Paging />
   </NuxtLayout>
   <DivFooter />
 </template>
 
-<script setup>
-const { data, pending } = await useAsyncData("cerita", () =>
-  $fetch("/api/cerita")
-);
-</script>
+<script setup></script>

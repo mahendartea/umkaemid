@@ -66,7 +66,7 @@
         <div class="hidden md:flex md:items-center">
           <NuxtLink
             to="/register"
-            class="mx-1 px-3 py-1 hover:bg-yellow-500 hover:rounded-md text-md font-semibold"
+            class="mx-1 px-3 py-1 rounded-md hover:bg-yellow-500 hover:rounded-md text-md font-semibold border border-yellow-500"
             :class="{
               'rounded-md bg-[#ebb22b] hover:bg-yellow-300 text-white transition duration-300 ease-in-out':
                 $route.path === '/register',

@@ -16,25 +16,17 @@
       </div>
     </div>
     <div class="flex flex-col items-center mb-5 p-2 space-y-4">
-      <div
-        v-for="newsitem in data.newsfeeds"
-        :key="newsitem.id"
-        class="lg:w-full flex justify-center"
-      >
-        <CardNewsFeed
-          :title="newsitem.title"
-          :imageProfile="newsitem.imageProfile"
-          :content="newsitem.description"
-          :constributor="newsitem.author"
-          :published="newsitem.createdat"
-        />
-      </div>
+      <Suspense>
+        <CardNewsFeed />
+
+        <template #fallback>
+          <Loader />
+        </template>
+      </Suspense>
     </div>
     <Paging />
   </NuxtLayout>
   <DivFooter />
 </template>
 
-<script setup>
-const { data } = await useFetch("/api/newsfeed");
-</script>
+<script setup></script>
