@@ -19,7 +19,9 @@
       <div
         class="w-full md:w-1/2 lg:w-5/6 p-2 flex flex-col lg:grid lg:grid-cols-3 gap-4 justify-center items-center"
       >
+        <div v-if="pending">Loading..</div>
         <div
+          v-else
           v-for="item in data.cerita"
           :key="item.id"
           class="my-2 w-full h-full bg-white shadow-lg rounded-lg overflow-hidden flex flex-col justify-between border border-gray-200 p-0"
@@ -44,5 +46,7 @@
 </template>
 
 <script setup>
-const { data } = await useFetch("/api/cerita");
+const { data, pending } = await useAsyncData("cerita", () =>
+  $fetch("/api/cerita")
+);
 </script>
